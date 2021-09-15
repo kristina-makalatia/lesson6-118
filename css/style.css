@@ -1,0 +1,68 @@
+.parent-box {
+	width: 400px;
+	height: 400px;
+	background-color: yellow;
+	position: relative;
+
+	/*transition-property: all;
+	transition-duration: 5s;
+	transition-timing-function: ease-in;
+	transition-delay: 2s;*/
+	transition: all 0.5s ease-in;
+}
+.child-box {
+	height: 150px;
+	width: 150px;
+	background-color: red;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) rotate(45deg);
+	transition: all 0.4s linear 3s;
+}
+.hello {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.parent-box:hover {
+	background-color: blue;
+
+}
+.child-box:hover {
+	background-color: lightblue;
+	transform: translate(-50%,-50%) rotate(0deg);
+}
+
+/*.parent-box:hover .child-box {
+	background-color: pink;
+}*/
+
+/*keyframe examples*/
+.image-animation {
+	height: 100px;
+	animation: myanimation 5s infinite 3s alternate;
+	/*position: absolute;*/
+}
+.animation-block {
+	/*position: relative;*/
+}
+
+
+
+/*keyframes*/
+/*@keyframes myanimation {
+	0% {left: 0px; transform: rotate(0deg);}
+	25% {left: 200px;transform: rotate(45deg);}
+	50% {left: 400px;transform: rotate(360deg);}
+	70% {left: 600px;transform: rotate(45deg);}
+	100% {left: 800px;transform: rotate(0deg);}
+}*/
+
+@keyframes myanimation {
+	0% {transform: translateX(0px) rotate(0deg);}
+	25% {transform: translateX(200px) rotate(45deg);}
+	50% {transform: translateX(400px) rotate(360deg);}
+	70% {transform:  translateX(600px) rotate(45deg);}
+	100% {transform: translateX(800px) rotate(0deg);}
+}
